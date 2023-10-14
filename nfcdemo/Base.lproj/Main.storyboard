@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iUf-yW-daB">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="yCt-Tr-nUt">
+            <objects>
+                <viewController id="ZIr-Lf-gJA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wsu-WQ-e7O">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="m9D-iu-55a">
+                                <rect key="frame" x="145.66666666666666" y="371.66666666666669" width="102" height="108.66666666666669"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTY-6R-pOO">
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Write NFC"/>
+                                        <connections>
+                                            <action selector="btnWrite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ldt-Rc-wHh"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="5dV-zT-1ck"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74Q-ft-HeH">
+                                        <rect key="frame" x="0.0" y="74.333333333333314" width="102" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Read NFC"/>
+                                        <connections>
+                                            <action selector="btnReadNFC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ch0-EF-5Nh"/>
+                                            <segue destination="3m6-ZY-4Mw" kind="show" id="NGg-YB-eZ9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UKm-Rx-LZG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m9D-iu-55a" firstAttribute="centerX" secondItem="wsu-WQ-e7O" secondAttribute="centerX" id="Jin-oR-6kr"/>
+                            <constraint firstItem="m9D-iu-55a" firstAttribute="centerY" secondItem="wsu-WQ-e7O" secondAttribute="centerY" id="cwy-Lw-69m"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zKt-1u-1At"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hi2-V3-DRi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289.3129770992366" y="-19.014084507042256"/>
+        </scene>
+        <!--Write View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WriteViewController" customModule="nfcdemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write NFC text here...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U2y-CX-wXY">
+                                <rect key="frame" x="20" y="203" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wv8-9Q-eZj">
+                                <rect key="frame" x="145.66666666666666" y="267" width="102" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Write NFC"/>
+                                <connections>
+                                    <action selector="btnWrite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J5I-N9-elk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wv8-9Q-eZj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4UG-Vf-PvE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U2y-CX-wXY" secondAttribute="trailing" constant="20" id="aYl-8D-Rjc"/>
+                            <constraint firstItem="wv8-9Q-eZj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bTy-Fi-9vv"/>
+                            <constraint firstItem="U2y-CX-wXY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="ivX-Sc-FyO"/>
+                            <constraint firstItem="U2y-CX-wXY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xgH-T9-7dD"/>
+                            <constraint firstItem="wv8-9Q-eZj" firstAttribute="top" secondItem="U2y-CX-wXY" secondAttribute="bottom" constant="30" id="zXi-e1-E07"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mqB-fa-dqO"/>
+                    <connections>
+                        <outlet property="btnWrite" destination="wv8-9Q-eZj" id="vfE-xT-XXg"/>
+                        <outlet property="txtWrite" destination="U2y-CX-wXY" id="Zy0-9n-qEh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.2519083969464" y="-27.464788732394368"/>
+        </scene>
+        <!--Read View Controller-->
+        <scene sceneID="beY-V5-OXk">
+            <objects>
+                <viewController id="3m6-ZY-4Mw" customClass="ReadViewController" customModule="nfcdemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="STA-iY-JYf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncs-F5-Yem">
+                                <rect key="frame" x="165.66666666666666" y="123" width="62" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Scan"/>
+                                <connections>
+                                    <action selector="btnScan:" destination="3m6-ZY-4Mw" eventType="touchUpInside" id="JD9-Iz-HSE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFa-HW-TXl">
+                                <rect key="frame" x="30" y="208" width="333" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WEf-RA-2z3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TFa-HW-TXl" firstAttribute="leading" secondItem="WEf-RA-2z3" secondAttribute="leading" constant="30" id="Bpr-lt-DFQ"/>
+                            <constraint firstItem="TFa-HW-TXl" firstAttribute="top" secondItem="ncs-F5-Yem" secondAttribute="bottom" constant="50" id="FWL-ZM-XyL"/>
+                            <constraint firstItem="ncs-F5-Yem" firstAttribute="top" secondItem="WEf-RA-2z3" secondAttribute="top" constant="20" id="dpe-mx-q9i"/>
+                            <constraint firstItem="WEf-RA-2z3" firstAttribute="trailing" secondItem="TFa-HW-TXl" secondAttribute="trailing" constant="30" id="sgr-s5-LIC"/>
+                            <constraint firstItem="ncs-F5-Yem" firstAttribute="centerX" secondItem="STA-iY-JYf" secondAttribute="centerX" id="sqt-rX-fyG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FZt-HB-xuw"/>
+                    <connections>
+                        <outlet property="lblData" destination="TFa-HW-TXl" id="j6i-Gg-Nul"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DWg-SA-ytE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1756.4885496183206" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zib-v6-8Lh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iUf-yW-daB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CQe-OH-UPZ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZIr-Lf-gJA" kind="relationship" relationship="rootViewController" id="iZi-RR-1Df"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2En-Re-gnT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-637.40458015267177" y="-19.014084507042256"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
